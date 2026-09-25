@@ -33,7 +33,7 @@ a {
 }
 
 
-/* =====================================================
+/*/* =====================================================
    NAVBAR
 ===================================================== */
 
@@ -56,7 +56,33 @@ a {
 
     color: rgb(2, 1, 58);
 
-    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+
+ /* =====================================================
+    NAVBAR
+ ===================================================== */
+
+#navbar {
+    width: 80%;
+    margin: 20px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgb(236, 234, 234);
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: rgb(2, 1, 58);
 
     position: relative;
     z-index: 1000;
@@ -67,16 +93,22 @@ a {
    LOGO
 ===================================================== */
 
+.nav-1 {
+    display: flex;
+    align-items: center;
+}
+
 .nav-1 a {
     color: rgb(2, 1, 58);
 
     text-decoration: none;
 
     font-size: 25px;
-
     font-weight: 700;
 
     letter-spacing: 0.5px;
+
+    white-space: nowrap;
 
     transition: 0.3s ease;
 }
@@ -108,8 +140,9 @@ a {
     text-decoration: none;
 
     font-size: 17px;
-
     font-weight: 600;
+
+    white-space: nowrap;
 
     transition: 0.3s ease;
 }
@@ -122,7 +155,9 @@ a {
 }
 
 
-/* Underline Animation */
+/* =====================================================
+   UNDERLINE ANIMATION
+===================================================== */
 
 .nav-2 a::after {
     content: "";
@@ -151,10 +186,40 @@ a {
 
 
 /* =====================================================
+   MENU BUTTON
+===================================================== */
+
+.menu-btn {
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgb(2, 1, 58);
+
+    font-size: 27px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+.menu-btn:hover {
+    color: rgb(4, 4, 221);
+}
+
+
+/* =====================================================
    TABLET
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
     #navbar {
         width: 90%;
@@ -164,12 +229,14 @@ a {
         font-size: 21px;
     }
 
-    .nav-2 a {
-        font-size: 15px;
-
-        padding: 9px 8px;
+    .nav-2 {
+        gap: 2px;
     }
 
+    .nav-2 a {
+        font-size: 15px;
+        padding: 9px 8px;
+    }
 }
 
 
@@ -184,41 +251,127 @@ a {
 
         margin: 12px auto;
 
-        padding: 12px 15px;
+        padding: 10px 15px;
 
-        flex-direction: column;
+        display: flex;
 
-        gap: 12px;
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+
+        box-sizing: border-box;
     }
 
-    .nav-1 {
-        width: 100%;
 
-        text-align: center;
+    /* -------------------------
+       LOGO
+    ------------------------- */
+
+    .nav-1 {
+        width: auto;
+
+        flex: 1;
+
+        display: flex;
+
+        align-items: center;
     }
 
     .nav-1 a {
-        font-size: 20px;
+        font-size: 18px;
+
+        white-space: nowrap;
     }
+
+
+    /* -------------------------
+       MENU BUTTON
+    ------------------------- */
+
+    .menu-btn {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        margin-left: 10px;
+
+        font-size: 26px;
+    }
+
+
+    /* -------------------------
+       MOBILE MENU
+    ------------------------- */
 
     .nav-2 {
         width: 100%;
 
-        display: flex;
+        display: none;
 
-        justify-content: center;
+        flex-direction: column;
 
-        flex-wrap: wrap;
+        align-items: stretch;
 
-        gap: 2px;
+        gap: 0;
+
+        margin-top: 12px;
+
+        border-top: 1px solid rgb(236, 234, 234);
     }
+
+
+    /* OPEN MENU */
+
+    .nav-2.active {
+        display: flex;
+    }
+
+
+    /* -------------------------
+       MOBILE LINKS
+    ------------------------- */
 
     .nav-2 a {
-        font-size: 14px;
+        width: 100%;
 
-        padding: 7px 8px;
+        box-sizing: border-box;
+
+        padding: 12px 10px;
+
+        text-align: center;
+
+        font-size: 15px;
+
+        font-weight: 600;
+
+        border-bottom: 1px solid rgb(236, 234, 234);
+
+        transition: 0.3s ease;
     }
 
+
+    /* Mobile Hover */
+
+    .nav-2 a:hover {
+        background: #f5f5f5;
+
+        color: rgb(4, 4, 221);
+    }
+
+
+    /* Remove Desktop Underline */
+
+    .nav-2 a::after {
+        display: none;
+    }
 }
 
 
@@ -229,26 +382,63 @@ a {
 @media (max-width: 450px) {
 
     #navbar {
-        padding: 12px 10px;
+        width: 94%;
+
+        margin: 10px auto;
+
+        padding: 9px 12px;
     }
 
+
     .nav-1 a {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+
+    .menu-btn {
+        width: 35px;
+        height: 35px;
+
+        font-size: 24px;
+    }
+
+
+    .nav-2 {
+        margin-top: 10px;
+    }
+
+
+    .nav-2 a {
+        padding: 11px 8px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 350px) {
+
+    .nav-1 a {
+        font-size: 14px;
+    }
+
+    .menu-btn {
+        width: 32px;
+        height: 32px;
+
+        font-size: 22px;
     }
 
     .nav-2 a {
-        font-size: 12px;
+        font-size: 13px;
 
-        padding: 6px 6px;
+        padding: 10px;
     }
-
-    .nav-2 a::after {
-        left: 6px;
-        right: 6px;
-    }
-
 }
-
 
 
 

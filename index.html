@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
 </head>
 <body>
     
-    <!--Navbar-->
-
     <div id="navbar">
+
         <div class="nav-1">
-            <a href ="#Home">MD TUHIN BADSHA</a>
+            <a href="#Home">MD TUHIN BADSHA</a>
         </div>
-        <div class="nav-2">
-            
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <div class="nav-2" id="navMenu">
 
             <a href="#Home">Home</a>
             <a href="#about">About</a>
@@ -29,9 +34,8 @@
             <a href="#my-book">My Book</a>
             <a href="#contact">Contact</a>
 
-            
         </div>
-        
+
     </div>
 
 
@@ -285,27 +289,6 @@ Interested in software engineering, full-stack web development, artificial intel
 
         </div>
 
-
-        <!-- CV Writing -->
-        <div class="certificate-card">
-
-            <div class="certificate-image">
-                <img src="CV.JPG" alt="CV Writing Certificate">
-            </div>
-
-            <div class="certificate-content">
-                <span class="certificate-number">04</span>
-                <h3>CV Writing</h3>
-                <p>
-                    Certificate of completion in CV Writing and Professional Documentation.
-                </p>
-
-                <button>View Certificate</button>
-            </div>
-
-        </div>
-
-
         <!-- Graphics Design -->
         <div class="certificate-card">
 
@@ -314,7 +297,7 @@ Interested in software engineering, full-stack web development, artificial intel
             </div>
 
             <div class="certificate-content">
-                <span class="certificate-number">05</span>
+                <span class="certificate-number">04</span>
                 <h3>Graphics Design</h3>
                 <p>
                     Certificate of completion in Graphics Design.
@@ -326,6 +309,55 @@ Interested in software engineering, full-stack web development, artificial intel
         </div>
 
 
+
+
+
+
+
+
+        <!-- CV Writing -->
+        <div class="certificate-card">
+
+            <div class="certificate-image">
+                <img src="Digital Drawing.JPG" alt="Digital Drawing Certificate">
+            </div>
+
+            <div class="certificate-content">
+                <span class="certificate-number">05</span>
+                <h3>Digital Drawing</h3>
+                <p>
+                    Certificate of completion in Digital Drawing and Professional Documentation.
+                </p>
+
+                <button>View Certificate</button>
+            </div>
+
+        </div>
+
+
+
+
+<!-- CV Writing -->
+        <div class="certificate-card">
+
+            <div class="certificate-image">
+                <img src="CV.JPG" alt="CV Writing Certificate">
+            </div>
+
+            <div class="certificate-content">
+                <span class="certificate-number">06</span>
+                <h3>CV Writing</h3>
+                <p>
+                    Certificate of completion in CV Writing and Professional Documentation.
+                </p>
+
+                <button>View Certificate</button>
+            </div>
+
+        </div>
+
+
+
         <!-- Financial Accounting -->
         <div class="certificate-card">
 
@@ -334,7 +366,7 @@ Interested in software engineering, full-stack web development, artificial intel
             </div>
 
             <div class="certificate-content">
-                <span class="certificate-number">06</span>
+                <span class="certificate-number">07</span>
                 <h3>Financial Accounting</h3>
                 <p>
                     Certificate of completion in Financial Accounting.
@@ -354,7 +386,7 @@ Interested in software engineering, full-stack web development, artificial intel
             </div>
 
             <div class="certificate-content">
-                <span class="certificate-number">07</span>
+                <span class="certificate-number">08</span>
                 <h3>Personal Branding in Era</h3>
                 <p>
                     Certificate of completion in Personal Branding in Era.
@@ -373,7 +405,7 @@ Interested in software engineering, full-stack web development, artificial intel
             </div>
 
             <div class="certificate-content">
-                <span class="certificate-number">08</span>
+                <span class="certificate-number">09</span>
                 <h3>Communication Skills</h3>
                 <p>
                     Certificate of completion in Communication Skills.

@@ -243,4 +243,8 @@ window.addEventListener("scroll", function () {
 });
 
 
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
 
